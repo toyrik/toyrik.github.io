@@ -1,0 +1,35 @@
+.table{ 
+	border-collapse: collapse; 
+	border: 0px; 
+	margin: 10px 33%;
+	/* margin: 10 auto; */
+} 
+table td{ 
+	border-style:solid; 
+	border-width:5px; 
+} 
+.table th{ 
+	border-style:solid; 
+	border-width:5px; 
+} 
+.table-red{ 
+	background-color:#E10606; 
+} 
+.table-blue{ 
+	background-color: #13234B; 
+} 
+.table-blue{ 
+	background-color: #E1ECFC;
+} 
+.table-yellow{ 
+	background-color: #FFDA00; 
+} 
+.table-maroon{ 
+	background-color:#1B0101; 
+} 
+.table-black{ 
+	background-color:#000000; 
+}
+img {
+	margin: 10px 33%;
+}

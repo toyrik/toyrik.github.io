@@ -1,108 +1,80 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
   <head>
-    <meta charset="utf-8">
-    <title>Михаил Горталов</title>
-    <meta http-equiv="X-UA-Compatible" content="IE = edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="keywords" content="">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/icons//favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/icons//favicon-16x16.png">
-    <link rel="manifest" href="img/icons/manifest.json">
-    <link rel="mask-icon" href="img/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/github-activity.css">
-    <link rel="stylesheet" href="./libs/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="js/counter.js"></script><!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
-    <body>
-      <header class="header">
-        <div class="container"><img class="profile-image img-responsive pull-left" src="img/profile.png" alt="Михаил">
-          <div class="profile-content pull-left">
-            <h1 class="name">Михаил Горталов</h1>
-            <h2 class="desc">Front-end Developer</h2>
-            <ul class="social list-inline">
-              <li><a href="https://vk.com/toyrik"><i class="fa fa-vk"></i></a></li>
-              <li> <a href="https://github.com/toyrik"><i class="fa fa-github">                 </i></a></li>
-              <li class="last-item"><a href="https://www.facebook.com/toyrik"><i class="fa fa-facebook-official"></i></a></li>
-            </ul>
-          </div><a class="btn btn-cta-primary pull-right" href="mailto:toyrik@gmail.com" target="_blank"><i class="fa fa-paper-plane"></i>Связаться</a>
-        </div>
-      </header>
-      <div class="container sections-wrapper">
-        <div class="row">
-          <div class="primary col-md-8 col-sm-12 col-xs-12">
-            <section class="about section">
-              <div class="section-inner">
-                <h2 class="heading">О себе </h2>
-                <div class="content">
-                  <p>Я верстальщик, живу в Воронеже. Занимаюсь версткой сайтов. Есть опыт работы в полиграфии. Интересуюсь графикой и программированием. Мне нравится мастерить что-то своими руками, изучать новые технологии.</p>
-                </div>
-              </div>
-            </section>
-            <section class="github section">
-              <div class="section-inner">
-                <h2 class="heading">My GitHub</h2>
-                <div class="github-graph" id="github-graph"></div>
-                <div class="ghfeed" id="ghfeed">
-                  <div id="feed"></div>
-                </div>
-              </div>
-            </section>
-          </div>
-          <div class="secondary col-md-4 col-sm-12 col-xs-12">
-            <aside class="info aside section">
-              <div class="section-inner">
-                <h2 class="heading sr-only">Basic Information</h2>
-                <div class="content">
-                  <ul class="list-unstyled">
-                    <li><i class="fa fa-map-marker"></i><span class="sr-only">Location: </span>Воронеж, Россия</li>
-                    <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a href="mailto://toyrik@gmail.com">toyrik@gmail.com</a></li>
-                    <li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a href="toyrik.github.io">http://toyrik.github.io</a></li>
-                  </ul>
-                </div>
-              </div>
-            </aside>
-            <aside class="skills aside section">
-              <div class="section-inner">
-                <h2 class="heading">Технологии</h2>
-                <div class="content">
-                  <div class="skillset">
-                    <div class="item">
-                      <h3 class="level-title">Javascript &amp; jQuery <span class="level-label"> </span></h3>
-                      <div class="level-bar">
-                        <div class="level-bar-inner" data-level="12%"></div>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <h3 class="level-title">HTML5, CSS3, SASS &amp; LESS <span class="level-label"></span></h3>
-                      <div class="level-bar">
-                        <div class="level-bar-inner" data-level="20%"></div>
-                      </div>
-                    </div>
-                    <p><a class="more-link" href="#" target="blank"><i class="fa fa-external-link">More on Coderwall</i></a></p>
-                  </div>
-                </div>
-              </div>
-            </aside>
-          </div>
+    <meta charset="utf-8"/>
+    <title>Стартовый шаблон - Главная</title>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png"/>
+    <link rel="manifest" href="/img/icons/site.webmanifest"/>
+    <link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5"/>
+    <link rel="shortcut icon" href="/img/icons/favicon.ico"/>
+    <meta name="msapplication-TileColor" content="#da532c"/>
+    <meta name="msapplication-config" content="/img/icons/browserconfig.xml"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="wrapper">
+        <div class="header__inner"><a class="logo" href="#"><img class="logo-img" src="./img/svg/anvil.svg" alt="logo"/></a>
+          <nav class="page-nav">
+            <div class="page-nav__large">
+              <ul>
+                <li class="page-nav__item"><a href="#">Ссылка-1</a></li>
+                <li class="page-nav__item"><a href="#">Ссылка-2</a></li>
+                <li class="page-nav__item"><a href="#">Ссылка-3</a></li>
+                <li class="page-nav__item"><a href="#">Ссылка-4</a></li>
+                <li class="page-nav__item"><a href="#">Ссылка-5</a></li>
+              </ul>
+            </div>
+            <div class="page-nav__small">
+              <ul>
+                <li class="page-nav__item"><a href="#">Ссылка-1</a></li>
+                <li class="page-nav__item"><a href="#">Ссылка-2</a></li>
+                <li class="page-nav__item"><a href="#">Ссылка-3</a></li>
+                <li class="page-nav__item"><a href="#">Ссылка-4</a></li>
+                <li class="page-nav__item"><a href="#">Ссылка-5</a></li>
+              </ul>
+            </div>
+            <div class="page-nav__toggle"></div>
+          </nav>
         </div>
       </div>
-      <footer class="footer">
-        <div class="container text-center">
-          <!--This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com --><small class="copyright">Designed with <i class="fa fa-heart"> </i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers        </small>
+    </header>
+    <div class="main-content">
+      <div class="wrapper">
+        <div class="slider"></div>
+        <div class="features">
+          <div class="features__item">Повторный контакт непосредственно порождает фирменный стиль. Инвестиционный продукт довольно хорошо сбалансирован. Спонсорство слабо восстанавливает институциональный бюджет на размещение, осознав маркетинг как часть производства. До недавнего времени считалось, что продвижение проекта категорически транслирует конвергентный нишевый проект. Изменение глобальной стратегии деятельно тормозит поведенческий таргетинг. Сервисная стратегия пока плохо порождает эмпирический принцип восприятия.</div>
+          <div class="features__item">Как предсказывают футурологи повышение жизненных стандартов специфицирует conversion rate, полагаясь на инсайдерскую информацию. Поэтому привлечение аудитории реально стабилизирует культурный формирование имиджа. В соответствии с законом Ципфа, стимулирование сбыта редко соответствует рыночным ожиданиям. Рекламный бриф традиционно транслирует популярный анализ зарубежного опыта.</div>
         </div>
-      </footer>
-      <script type="text/javascript" src="libs/jquery-1.11.3.min.js"></script>
-      <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/3.0.2/es6-promise.min.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fetch/0.10.1/fetch.min.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
-      <script type="text/javascript" src="js/github-activity.js"></script>
-      <script type="text/javascript" src="js/common.js"> </script>
-    </body>
-  </head>
+        <div class="offers">
+          <div class="offers__item">Рекламный клаттер традиционно усиливает стиль менеджмента. Сегмент рынка программирует анализ рыночных цен, не считаясь с затратами. Стимулирование сбыта, отбрасывая подробности, допускает BTL. До недавнего времени считалось, что соц-дем характеристика аудитории переворачивает коллективный формирование имиджа.</div>
+          <div class="offers__item">Баннерная реклама программирует из ряда вон выходящий медиаплан. Нестандартный подход, конечно, решительно искажает отраслевой стандарт. Начальная стадия проведения исследования, как следует из вышесказанного, ускоряет имидж. Процесс стратегического планирования основательно подпорчен предыдущим опытом применения.</div>
+          <div class="offers__item">Построение бренда нетривиально. Портрет потребителя обуславливает тактический маркетинг. Направленный маркетинг парадоксально восстанавливает рекламный макет, осознав маркетинг как часть производства. Конвесия покупателя развивает фирменный стиль, используя опыт предыдущих кампаний. Контекстная реклама, на первый взгляд, продуцирует SWOT-анализ.</div>
+        </div>
+      </div>
+    </div>
+    <footer class="main-footer">
+      <div class="wrapper">
+        <div class="wrapper__inner">
+          <nav class="page-nav">
+            <ul>
+              <li class="page-nav__item"><a href="#">Ссылка-1</a></li>
+              <li class="page-nav__item"><a href="#">Ссылка-2</a></li>
+              <li class="page-nav__item"><a href="#">Ссылка-3</a></li>
+              <li class="page-nav__item"><a href="#">Ссылка-4</a></li>
+              <li class="page-nav__item"><a href="#">Ссылка-5</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script src="./libs/jquery.min.js"></script>
+    <script src="./js/common.js"></script>
+  </body>
 </html>

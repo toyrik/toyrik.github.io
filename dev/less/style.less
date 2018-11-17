@@ -1,0 +1,164 @@
+@import "./include/grid.less";
+@import "./include/variables.less";
+@import "./include/fonts.less";
+
+.reset;
+
+.debug {
+
+.debug(rgba(0, 0, 0, 0.5), none );
+}
+
+body {
+	line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+	font-weight: normal;
+  background:@color_dark;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+a {
+	text-decoration: none;
+  color: @color_lightnes;
+}
+
+
+
+.main-header {
+	padding-top: 15px; 
+  border-bottom: solid 2px @color_lightnes;
+  margin-bottom: 50px;
+	
+	>.wrapper {
+
+		.wrapper();
+
+	}
+
+	.header__inner{
+		align-items: center;
+
+			.row-flex();
+
+	}
+
+	.logo {
+		margin-right: auto;
+		margin-left: 7.5px;
+		background: @color_lightnes;
+		padding: 10px;
+		border-radius: 50%;
+		margin-bottom: 15px;
+
+		&-img{
+			width: 48px;
+		}
+	}
+
+	.page-nav {
+		position: relative;
+		margin-right: 7.5px;
+	
+		&__large {
+			display: flex;
+
+			.md-block({
+				display: none;
+
+			});
+		}
+	
+		&__toggle {
+			display: none;
+			width: 40px;
+			height: 30px;
+			background: @color_light;
+			border-radius: 7px;
+
+			.md-block({
+				display: block;
+			});
+		}
+
+		&__small {
+			display: none;
+			width: 76px;
+			position: absolute;
+			right: 65px;
+		}
+		
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			list-style: none;
+			li {
+				background: @color_darknes;
+				a{
+					text-transform: uppercase;
+					padding: 10px;
+				}
+			}
+		}
+	}
+}
+
+.main-content {
+	min-height: 70vh;	
+
+	&>.wrapper {
+		.wrapper();
+	}
+
+	.features {
+		justify-content: center;
+		margin-bottom: 15px;
+		.row-flex();
+
+		&__item {
+			padding: 15px;
+			flex: 1 0 17em;
+			background: @color_light;
+			color: @color_darknes;
+
+			.col();
+			.size(6);
+			.size-sm(3);
+			.size-xs(2);
+			.md-block({
+				margin-bottom: 15px;
+			});
+		}
+	}
+
+	.offers {
+		.row-flex();
+
+		&__item:first-child {
+			margin-left: -@fields;
+		}
+		
+		&__item {
+			padding: 15px;
+			flex: 1 0 17em;
+			background: @color_light;
+			color: @color_darknes;
+			.md-block({
+				.col();
+			});
+			.col-padding();
+		}
+	}
+}
+
+.main-footer{
+	background: @color_darknes;
+	.page-nav {
+		ul {
+			display: flex;
+		}
+	}
+}
+
+.none {
+  display: none;
+}

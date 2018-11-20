@@ -1,5 +1,8 @@
 .intro {
   background: @color_main;
+  color: rgba(255, 255, 255, 07);
+  padding-top: 48px;
+  padding-bottom: 48px;
 
   &>.wrapper{
 
@@ -9,15 +12,55 @@
       .row-flex();
     }
   }
+
+  &-body {
+    flex: 1 0 310px;
+    margin-right: @offset_one_side;
+
+    .lead {
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+
+    .name {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+
+    .bio {
+      line-height: 1.5rem;
+      margin-bottom: 1rem;
+      
+      a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+}
+
+.contact {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  background: @rgba_sekond-dark;
+  padding: 0.6rem 1.5rem;
 }
 
 .profile__image {
+  margin-left: @offset_one_side;
+  margin-right: 3rem;
+  border-radius: 0.25rem;
   max-width: 240px;
   max-height: 240px;
   flex:0 0 240px;
 
 }
 
-.intro-body {
-  flex: 1 0 310px;
+.btn {
+  box-sizing: border-box;
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }

@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css"/>
   </head>
   <body>
-    <div class="header">
+    <header class="header">
       <div class="navbar">
         <div class="wrapper">
           <div class="wrapper__inner">
@@ -42,24 +42,67 @@
             </ul>
             <button class="navbar-toggler"></button>
             <nav class="navbar-collapse">
-              <ul class="nav">
-                <li class="nav__item active"><a class="nav__link" href="./index.html">Обо мне</a></li>
-                <li class="nav__item"><a class="nav__link" href="./projects.html">Проекты</a></li>
-                <li class="nav__item"><a class="nav__link" href="./resume.html">Резюме</a></li>
+              <ul class="page-nav">
+                <li class="page-nav__item active"><a class="page-nav__link" href="./index.html">Обо мне</a></li>
+                <li class="page-nav__item"><a class="page-nav__link" href="./projects.html">Проекты</a></li>
+                <li class="page-nav__item"><a class="page-nav__link" href="./resume.html">Резюме</a></li>
               </ul><span class="slide-line"></span>
             </nav>
           </div>
         </div>
       </div>
-    </div>
+    </header>
     <section class="intro">
       <div class="wrapper">
         <div class="wrapper__inner"><img class="profile__image" src="./img/profile.jpg" alt="Mikhail Gortalov"/>
           <div class="intro-body">
             <div class="lead">Привет, я -</div>
             <h1 class="name">Михаил Горталов.</h1>
-            <div class="bio">В свободное время занимаюсь вёрсткой PSD макетов, выполняю заказы на фрилансе.Основные используемые технологии: html5, css3, javaScript. В работе активно использую различные инструменты для оптимизации процесса: gulp, less, smart-grid. Хотите знать, как я могу помочь вашему проекту? Ознакомьтесь с моими примерами <a href="./projects">проектов</a> и <a href="./resume.html">резюме</a>.</div><a class="contact btn" href="mailto:toyrik@gmail.com" target="_blank">Связаться</a>
+            <div class="bio">В свободное время занимаюсь вёрсткой PSD макетов, выполняю заказы на фрилансе.Основные используемые технологии: html5, css3, javaScript. В работе активно использую различные инструменты для оптимизации процесса: gulp, less, smart-grid. Хотите знать, как я могу помочь вашему проекту? Ознакомьтесь с примерами моих <a href="./projects">проектов</a> и <a href="./resume.html">резюме</a>.</div><a class="contact btn" href="mailto:toyrik@gmail.com" target="_blank">Связаться</a>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="skills">
+      <div class="wrapper">
+        <h3 class="section-title">Что я умею</h3>
+        <div class="section-intro">У меня есть некоторый опыт в создании веб-сайтов для различных клиентов. Ниже можно ознакомиться с кратким обзором моих навыков и умений. Если хотите узнать больше, вы можете ознакомиться с моим <a href="./resume.html">резюме</a></div>
+        <div class="skills-blocks">
+          <div class="skills-blocks__item">
+            <div class="skills-blocks__icon"><img class="skills-icon" src="./img/svg/frontend-icon.svg" alt="frontend"/></div>
+            <h4 class="skills-cat">Фронтенд</h4>
+            <ul>
+              <li>JavaScript</li>
+              <li>Node.js</li>
+              <li>Gulp/Smart-grid</li>
+              <li>HTML5/CSS3/Pug/Sass/Less</li>
+            </ul>
+          </div>
+          <div class="skills-blocks__item">
+            <div class="skills-blocks__icon"><img class="skills-icon" src="./img/svg/backend-icon.svg" alt="frontend"/></div>
+            <h4 class="skills-cat">Бекенд</h4>
+            <ul>
+              <li>PHP</li>
+              <li>WordPress</li>
+            </ul>
+          </div>
+          <div class="skills-blocks__item">
+            <div class="skills-blocks__icon"><img class="skills-icon" src="./img/svg/other-skills-icon.svg" alt="frontend"/></div>
+            <h4 class="skills-cat">Дополнительно</h4>
+            <ul>
+              <li>Linux</li>
+              <li>Avocode</li>
+              <li>Photoshop</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta">
+      <div class="wrapper">
+        <div class="wrapper__inner"><img class="profile-small" src="./img/profile.jpg"/>
+          <h3 class="section-title">Заинтересовались в найме?</h3>
+          <div class="cta__text">Ищете нового сотрудника? Чтобы начать общение, просто напишите мне письмо по адресу <a href="mailto:toyrik@gmail.com">toyrik@gmail.com</a></div><a class="contact btn" href="mailto:toyrik@gmail.com" target="_blank">Связаться</a>
         </div>
       </div>
     </section>
@@ -69,13 +112,11 @@
     <footer class="main-footer">
       <div class="wrapper">
         <div class="wrapper__inner">
-          <nav class="page-nav">
-            <ul>
-              <li class="page-nav__item"><a href="#">Ссылка-1</a></li>
-              <li class="page-nav__item"><a href="#">Ссылка-2</a></li>
-              <li class="page-nav__item"><a href="#">Ссылка-3</a></li>
-              <li class="page-nav__item"><a href="#">Ссылка-4</a></li>
-              <li class="page-nav__item"><a href="#">Ссылка-5</a></li>
+          <nav class="footer-navbar">
+            <ul class="page-nav">
+              <li class="page-nav__item active"><a class="page-nav__link" href="./index.html">Обо мне</a></li>
+              <li class="page-nav__item"><a class="page-nav__link" href="./projects.html">Проекты</a></li>
+              <li class="page-nav__item"><a class="page-nav__link" href="./resume.html">Резюме</a></li>
             </ul>
           </nav>
         </div>

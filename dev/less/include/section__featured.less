@@ -1,0 +1,125 @@
+.wrapper {
+  .wrapper();
+}
+
+.project-cards{
+  .row-flex();
+}
+
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  background-clip: border-box;
+  margin-bottom: 50px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  .col();
+  .size(6);
+  .size-lg(12);
+
+  &__img-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__img-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem;
+    box-sizing: border-box;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+
+    &.overlay-content {
+      background: rgba(33, 41, 52, 0.8);
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  &__img-top{
+    width: 100%;
+    vertical-align: middle;
+  }
+
+  .overlay-content{
+    top: 100%;
+    .card__title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+
+  &__img-container:hover .overlay-content{
+    top: 0
+  }
+
+  &__logo {
+    box-sizing: border-box;
+    text-align: right;
+    position: absolute;
+    width: 100%;
+    padding: 1.25rem;
+    margin: -1.25rem;
+
+    
+
+    img {
+      vertical-align: middle;
+    }
+  }
+
+  &__body {
+    padding: 1.25rem 1.25rem 0 1.25rem;
+    .card__title {
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      .title-link{
+        color: rgba(67, 78, 94, 0.8);
+
+        &:hover {
+          color:rgba(67, 78, 94, 0.8);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    text-align: center;
+    padding: 0.75rem 1.25rem 1.5rem ;
+    
+    .tech {
+      justify-content: center;
+      &__item {
+        display: inline-block;
+        margin-right: 0.5rem;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+.badge {
+  box-sizing: border-box;
+  background-color: @color_light;
+  color: #fff;
+  padding: 0.35rem 0.7rem 0.4rem;
+  border-radius: 0.8rem;
+  font-size: 75%;
+  line-height: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: baseline;
+}

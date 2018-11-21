@@ -19,17 +19,25 @@
 
 
 .skills-blocks {
+  justify-content: center;
   .row-flex();
   
   &__item{
     position: relative;
     padding: 1.5rem 3rem;
     background: #fff;
-    flex: 1 0 235px;
+    flex-grow: 1;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
     
     .col();
-    .size-lg(3);
+    .size(3);
+    .size-lg(12);
+    .lg-block({
+      margin-bottom: 50px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    });
 
     .skills-cat {
       margin: 1.5rem 0;

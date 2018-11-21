@@ -17,6 +17,16 @@ body {
 	color: rgba(67, 78, 94, 0.8);
 }
 
+a {
+	text-decoration: none;
+	color: @rgba_dark;
+
+	&:hover {
+		color: @rgba_second-light;
+	}
+}
+
+
 @import "./include/header.less";
 @import "./include/section__intro.less";
 @import "./include/section__skills.less";

@@ -33,6 +33,9 @@
       a {
         text-decoration: none;
         color: @rgba_text-a;
+        &:hover {
+          color: @rgba_light;
+        }
       }
     }
   }
@@ -41,8 +44,12 @@
 .contact {
   color: @rgba_text-a;
   text-decoration: none;
-  background: @rgba_sekond-dark;
+  background: @rgba_second-dark;
   padding: 0.6rem 1.5rem;
+  &:hover {
+    color: @rgba_dark;
+    background-color: @rgba_light;
+  }
 }
 
 .profile__image {

@@ -2,7 +2,18 @@
   .wrapper();
 }
 
+.featured {
+  padding-top: 50px;
+}
+
+.projects {
+  padding-top: 50px;
+  
+  .row-flex();
+}
+
 .project-cards{
+
   .row-flex();
 }
 
@@ -67,14 +78,18 @@
     text-align: right;
     position: absolute;
     width: 100%;
+    height: 100%;
     padding: 1.25rem;
     margin: -1.25rem;
-
-    
+    background: rgba(0, 0, 0, 0.3);
 
     img {
       vertical-align: middle;
     }
+  }
+
+  &__img-container:hover .card__logo{
+    opacity: 0;
   }
 
   &__body {

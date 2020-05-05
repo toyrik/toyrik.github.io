@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="35px"
+   height="44px"
+   viewBox="0 0 35 44"
+   version="1.1"
+   id="svg22"
+   sodipodi:docname="backend-icon.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata26">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1175"
+     inkscape:window-height="872"
+     id="namedview24"
+     showgrid="false"
+     inkscape:zoom="5.3636364"
+     inkscape:cx="-2.0762712"
+     inkscape:cy="22"
+     inkscape:window-x="42"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg22" />
+  <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+  <title
+     id="title2">db</title>
+  <desc
+     id="desc4">Created with Sketch.</desc>
+  <defs
+     id="defs6" />
+  <g
+     id="Page-1"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <g
+       id="Landing"
+       transform="translate(-924.000000, -604.000000)"
+       stroke="#FFFFFF"
+       stroke-width="1.5625">
+      <g
+         id="Section-skills"
+         transform="translate(292.000000, 424.000000)">
+        <g
+           id="content"
+           transform="translate(0.000000, 162.000000)">
+          <g
+             id="Col-R"
+             transform="translate(443.000000, 0.000000)">
+            <g
+               id="icon"
+               transform="translate(166.000000, 0.000000)">
+              <g
+                 id="db"
+                 transform="translate(19.000000, 15.000000)">
+                <path
+                   d="M37.8125,8.6875 C37.8125,11.2757812 30.8984375,13.375 21.40625,13.375 C11.9140625,13.375 5,11.2757812 5,8.6875 C5,6.09921875 11.9140625,4 21.40625,4 C30.8984375,4 37.8125,6.09921875 37.8125,8.6875 L37.8125,8.6875 Z"
+                   id="Path"
+                   style="stroke:#434e5e;stroke-opacity:1" />
+                <path
+                   d="M37.8125,9 L37.8125,19.9375 C37.8125,22.5257813 30.8984375,24.625 21.40625,24.625 C11.9140625,24.625 5,22.5257813 5,19.9375 L5,9"
+                   id="path9"
+                   style="stroke:#434e5e;stroke-opacity:1" />
+                <path
+                   d="M37.8125,30 L37.8125,40.9375 C37.8125,43.5257813 30.8984375,45.625 21.40625,45.625 C11.9140625,45.625 5,43.5257813 5,40.9375 L5,30"
+                   id="path11"
+                   style="stroke:#434e5e;stroke-opacity:1" />
+                <path
+                   d="M37.8125,20 L37.8125,30.9375 C37.8125,33.5257813 30.8984375,35.625 21.40625,35.625 C11.9140625,35.625 5,33.5257813 5,30.9375 L5,20"
+                   id="path13"
+                   style="stroke:#434e5e;stroke-opacity:1" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

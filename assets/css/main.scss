@@ -5,17 +5,4 @@
 
 // Импортируются части для сборки из `sass_dir` (defaults to `_sass`)
 
-@import
-{% if site.bootwatch %}
-"bootswatch/{{site.bootwatch | downcase}}/variables",
-{% endif %}
-
-"bootstrap",
-
-{% if site.bootwatch %}
-"bootswatch/{{site.bootwatch | downcase}}/bootswatch",
-{% endif %}
-
-"syntax-highlighting",
-"my-theme"
-;
+@import "bootstrap", "syntax-highlighting", "my-theme";

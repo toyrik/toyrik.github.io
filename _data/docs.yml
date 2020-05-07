@@ -2,8 +2,13 @@
   docs:
   - home
 
+- title: How to
+  docs:
+  - ssh-keys
+
 #- title: Examples
 #  docs:
 #  - cheatsheet
 #  - font-awesome
 #  - bootstrap
+

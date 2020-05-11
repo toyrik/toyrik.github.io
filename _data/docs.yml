@@ -5,6 +5,7 @@
 - title: How to
   docs:
   - ssh-keys
+  - debian-setup-for-nginx-proxy
 
 #- title: Examples
 #  docs:

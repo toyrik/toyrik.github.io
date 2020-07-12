@@ -4,15 +4,15 @@ title:  "Welcome to Jekyll!"
 date:   2020-05-05 08:32:44 +0300
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Вы найдете этот пост в своем каталоге _posts. Отредактируйте его и перестройте сайт, чтобы увидеть ваши изменения. Вы можете перестроить сайт разными способами, но наиболее распространенный способ - запустить jekyll serve, который запускает веб-сервер и автоматически регенерирует ваш сайт при обновлении файла.
 
-Jekyll requires blog post files to be named according to the following format:
+Jekyll требует, чтобы файлы сообщений в блогах были названы в соответствии со следующим форматом:
 
 `YEAR-MONTH-DAY-title.MARKUP`
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Где `YEAR` - четырехзначное число,` MONTH` и `DAY` - двузначные числа, а `.MARKUP` или `.md` - расширение файла, представляющее формат, используемый в файле. После этого добавте тот материал который необходим. Взгляните на этот поста в браузере, чтобы понять, как он работает.
 
-Jekyll also offers powerful support for code snippets:
+Jekyll также предлагает мощную поддержку сниппетов:
 
 {% highlight ruby %}
 def print_hi(name)
@@ -22,7 +22,7 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+Для того чтобы получить больше информации посетите: [докуметация Jekyll][jekyll-docs]. Для того чтобы сообщить о найденых багах, предложить улучшения [Jekyll’s GitHub repo][jekyll-gh]. Если у вас появились вопросы вы можете задать их на: [Jekyll Talk][jekyll-talk].
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll

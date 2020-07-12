@@ -6,6 +6,8 @@
   docs:
   - ssh-keys
   - debian-setup-for-nginx-proxy
+  - pullrequest
+
 
 #- title: Examples
 #  docs:

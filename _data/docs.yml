@@ -4,9 +4,10 @@
 
 - title: How to
   docs:
-  - ssh-keys
-  - debian-setup-for-nginx-proxy
-  - pullrequest
+    - create-package
+    - ssh-keys
+    - debian-setup-for-nginx-proxy
+    - pullrequest
 
 
 #- title: Examples

@@ -4,6 +4,7 @@
 
 - title: How to
   docs:
+    - switching-php-version
     - create-package
     - ssh-keys
     - debian-setup-for-nginx-proxy

@@ -2,7 +2,7 @@
 title: Настройка сервера с nginx
 permalink: /docs/debian-setup-for-nginx-proxy/
 ---
-# Настройка серверного набора приложений  (NGINX, Apache, MariaDB (MySQL), PHP, PHP-FPM (fastCGI), FTP, PHPMyAdmin, Memcached, Postfix на Debian подобной системе).
+## Настройка серверного набора приложений  (NGINX, Apache, MariaDB (MySQL), PHP, PHP-FPM (fastCGI), FTP, PHPMyAdmin, Memcached, Postfix на Debian подобной системе)
 
 Пользуясь данной инструкцией можно настроить веб-сервер для решения задач по размещению сайтов, порталов или веб-приложений. Данная инструкция подходит для операционных систем основанных на deb- пакетах
 
@@ -39,13 +39,15 @@ sudo apt-get install -y vim mosh tmux htop git curl wget unzip zip gcc   build-e
 ```bash
 sudo vim /etc/ssh/sshd_config
 ```
-```
+
+```conf
 AllowUsers www
 PermitRootLogin no
 PasswordAuthentication no
 ```
 
 Перезапускаем SSH, меняем пароль своего пользователя:
+
 ```bash
 sudo service ssh restart
 sudo passwd $user
@@ -72,7 +74,8 @@ ntpdate ru.pool.ntp.org
 ```bash
 crontab -e
 ```
-```
+
+```bash
 0 0 * * * /usr/sbin/ntpdate ru.pool.ntp.org
 ```
 
@@ -86,7 +89,7 @@ sudo apt-get install nginx
 
 Для того что бы избежать ошибки: **could not build server_names_hash, you should increase server_names_hash_bucket_size: 32**, которая может возникнуть при большом количестве виртуальных серверов или если один из них будет иметь длинное название, в файле `/etc/nginx/nginx.conf` нужно снять комментарий со строчки:
 
-```
+```conf
 http {
     ...
     server_names_hash_bucket_size 64;
@@ -126,14 +129,14 @@ php -v
 Устанавливаем PHP-FPM и наиболее популярные модули которые могут пригодится в дальнейшем:
 
 ```bash
-sudo apt-get install php-fpm php-cli php-mysql php-gd php-ldap php-odbc php-pdo php-pecl-memcache php-opcache php-pear php-xml php-xmlrpc php-mbstring php-snmp php-soap php-zip php-json php-intl
+sudo apt-get install php-fpm php-cli php-mysql php-gd php-ldap php-odbc php-pdo php-opcache php-pear php-xml php-xmlrpc php-mbstring php-snmp php-soap php-zip php-json php-intl
 ```
 
 Добавляем в автозагрузку и Запускаем:
 
 ```bash
-sudo systemctl enable php-fpm
-sudo systemctl start php-fpm
+sudo systemctl enable php7.4-fpm
+sudo systemctl start php7.4-fpm
 ```
 
 ### Настройка связки NGINX + PHP
@@ -146,7 +149,7 @@ sudo vim /etc/nginx/sites-enabled/default
 
 В секции **location** меняем параметр **index** на следующее значение:
 
-```
+```conf
 location / {
         index index.php index.html index.htm;
     }
@@ -154,10 +157,10 @@ location / {
 
 А внутри секции **server** добавим следующее:
 
-```
+```conf
 location ~ \.php$ {
             set $root_path /var/www/html;
-            fastcgi_pass unix:/run/php/php7.2-fpm.sock;
+            fastcgi_pass unix:/run/php/php7.4-fpm.sock;
             fastcgi_index index.php;
             fastcgi_param SCRIPT_FILENAME $root_path$fastcgi_script_name;
             include fastcgi_params;
@@ -167,7 +170,7 @@ location ~ \.php$ {
 
 В результате должно получится что то вроде этого:
 
-```
+```conf
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
@@ -182,9 +185,9 @@ server {
 
     location ~ \.php$ {
         set $root_path /var/www/html;
-        fastcgi_pass unix:/run/php/php7.2-fpm.sock;
+        fastcgi_pass unix:/run/php/php7.4-fpm.sock;
         fastcgi_index index.php;
-        fastcgi_param SCRIPT_FILENAME $root_path$fastcgi_script_name;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         include fastcgi_params;
         fastcgi_param DOCUMENT_ROOT $root_path;
     }
@@ -206,19 +209,19 @@ sudo systemctl restart nginx
 Открываем конфигурационный файл PHP-FPM:
 
 ```bash
-sudo vim /etc/php/7.2/fpm/pool.d/www.conf
+sudo vim /etc/php/7.4/fpm/pool.d/www.conf
 ```
 
 Проверяем, что путь до сокетного файла такой же, как мы задали в настройках NGINX:
 
-```
-listen = /run/php/php7.2-fpm.sock
+```conf
+listen = /run/php/php7.4-fpm.sock
 ```
 
 Иначе меняем его и перезапускаем сервис:
 
-```
-sudo systemctl restart php7.2-fpm
+```bash
+sudo systemctl restart php7.4-fpm
 ```
 
 Теперь заходим в каталог хранения настроенного сайта:
@@ -234,7 +237,8 @@ sudo vi index.php
 ```
 
 ```php
-<?php phpinfo(); ?>
+<?php 
+phpinfo();
 ```
 
 Открываем браузере и переходим по адресу http://<IP-адрес сервера>. Мы должны увидеть сводную информацию по PHP и его настройкам.
@@ -274,7 +278,7 @@ GRANT ALL PRIVILEGES ON new_db_name.* TO new_db_user@localhost IDENTIFIED BY 'pa
 После перезагружаем php-fpm:
 
 ```bash
-sudo systemctl restart php7.2-fpm
+sudo systemctl restart php7.4-fpm
 ```
 
 И открываем наш сайт в браузере. В phpinfo появится новая секция MySQL.
@@ -295,7 +299,7 @@ sudo vim /etc/nginx/sites-enabled/phpmyadmin.conf
 
 И добавим в него следующее содержимое:
 
-```
+```conf
 server {
         listen       80;
         server_name  phpmyadmin.local;
@@ -308,9 +312,9 @@ server {
         }
 
         location ~ \.php$ {
-                fastcgi_pass unix:/run/php/php7.2-fpm.sock;
+                fastcgi_pass unix:/run/php/php7.4-fpm.sock;
                 fastcgi_index index.php;
-                fastcgi_param SCRIPT_FILENAME $root_path$fastcgi_script_name;
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
                 include fastcgi_params;
                 fastcgi_param DOCUMENT_ROOT $root_path;
         }
@@ -342,7 +346,7 @@ sudo systemctl enable memcached
 
 Перезапускаем php-fpm:
 
-```
+```bash
 sudo systemctl restart php7.2-fpm
 ```
 
@@ -366,29 +370,29 @@ id www-data
 
 Создаем виртуального пользователя:
 
-```
+```bash
 ftpasswd --passwd --file=/etc/proftpd/ftpd.passwd --name=ftpwww --uid=33 --gid=33 --home=/var/www --shell=/usr/sbin/nologin
 ```
 
 > где **/etc/proftpd/ftpd.passwd** *— путь до файла, в котором хранятся пользователи;
-> 
-> **ftpwww** — имя пользователя (логин); 
-> 
-> **uid** и **gid** — идентификаторы пользователя и группы системной учетной записи (www-data); 
-> 
-> **/var/www** — домашний каталог пользователя; 
-> 
+>
+> **ftpwww** — имя пользователя (логин);
+>
+> **uid** и **gid** — идентификаторы пользователя и группы системной учетной записи (www-data);
+>
+> **/var/www** — домашний каталог пользователя;
+>
 > **/usr/sbin/nologin** — оболочка, запрещающая локальный вход пользователя в систему.*
 
 Открываем основной конфигурационный файл:
 
-```
+```bash
 vi /etc/proftpd/proftpd.conf
 ```
 
 Снимаем комментарий или редактируем опцию:
 
-```
+```conf
 DefaultRoot                     ~
 ```
 
@@ -402,7 +406,7 @@ sudo vim /etc/proftpd/conf.d/custom.conf
 
 Со следующим содержимым:
 
-```
+```conf
 UseIPv6 off
 IdentLookups off
 PassivePorts 40900 40999
@@ -443,7 +447,7 @@ sudo vim /etc/apache2/ports.conf
 
 И редактируем следующее:
 
-```
+```conf
 Listen 8080
 
 #<IfModule ssl_module>
@@ -459,13 +463,13 @@ Listen 8080
 
 Открываем основной конфигурационный файл для apache:
 
-``` bash
+```bash
 sudo vim /etc/apache2/apache2.conf
 ```
 
 Рядом с опциями Directory дописываем:
 
-```
+```conf
 <Directory /var/www/*/www>
     AllowOverride All
     Options Indexes ExecCGI FollowSymLinks
@@ -475,21 +479,21 @@ sudo vim /etc/apache2/apache2.conf
 
 > где:
 >
-> **Directory** указывает на путь, для которого мы хотим задать настройки; 
+> **Directory** указывает на путь, для которого мы хотим задать настройки;
 >
-> **AllowOverride** позволит переопределить все настройки с помощью файла .htaccess; 
+> **AllowOverride** позволит переопределить все настройки с помощью файла .htaccess;
 >
-> **Options** задает некоторые настройки: 
+> **Options** задает некоторые настройки:
 >
 > **Indexes** разрешает списки каталогов,
 >
-> **ExecCGI** разрешает запуск cgi скриптов, 
+> **ExecCGI** разрешает запуск cgi скриптов,
 >
 > **Require all granted** предоставляет всем доступ к сайтам в данном каталоге.
 
 Ниже допишем:
 
-```
+```conf
 <IfModule setenvif_module>
     SetEnvIf X-Forwarded-Proto https HTTPS=on
 </IfModule>
@@ -539,23 +543,25 @@ sudo systemctl start apache2
 ```bash
 sudo vim /etc/nginx/sites-enable/default
 ```
+
 Находим настоенный location для php-fpm:
 
-```
+```conf
 ...
         location ~ \.php$ {
             set $root_path /var/www/html;
-            fastcgi_pass unix:/run/php/php7.2-fpm.sock;
+            fastcgi_pass unix:/run/php/php7.4-fpm.sock;
             fastcgi_index index.php;
-            fastcgi_param SCRIPT_FILENAME $root_path$fastcgi_script_name;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
             include fastcgi_params;
             fastcgi_param DOCUMENT_ROOT $root_path;
         }
 ...
 ```
+
 который меняем на:
 
-```
+```conf
 ...
         location ~ \.php$ {
             proxy_pass http://127.0.0.1:8080;
@@ -567,12 +573,14 @@ sudo vim /etc/nginx/sites-enable/default
         }
 ...
 ```
+
 Проверяем и перезапускаем nginx:
 
 ```bash
 sudo nginx -t
 sudo systemctl restart nginx
 ```
+
 Пробуем открыть в браузере ``http://localhost`` - должна открыться та же страница, что при проверке Apache (с добавлением 8080): т.е. в разделе **Server API** мы должны увидеть **Apache**.
 
 ### Apache Real IP
@@ -581,10 +589,11 @@ sudo systemctl restart nginx
 
 Создаем конфигурационный файл со следующим содержимым:
 
-```bash 
+```bash
 sudo vim /etc/apache2/mods-available/remoteip.conf
 ```
-```
+
+```conf
 <IfModule remoteip_module>
   RemoteIPHeader X-Forwarded-For
   RemoteIPTrustedProxy 127.0.0.1/8
@@ -599,7 +608,7 @@ sudo a2enmod remoteip
 
 Перезапускаем apache:
 
-```
+```bash
 sudo systemctl restart apache2
 ```
 

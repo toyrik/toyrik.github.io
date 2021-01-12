@@ -384,7 +384,7 @@ function updateNotification() {
 }
 ```
 
-Вы можете скачать репозиторий и ознакомится с кодом по ссылке.
+Вы можете скачать репозиторий и ознакомится с кодом по [ссылке](https://github.com/toyrik/simpleWebPush).
 
 ---
 Оригинал взят [отсюда](https://webdamn.com/build-push-notification-system-with-php-mysql/).

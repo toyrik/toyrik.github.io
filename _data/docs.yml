@@ -9,6 +9,7 @@
     - ssh-keys
     - debian-setup-for-nginx-proxy
     - pullrequest
+    - webPush
 
 
 #- title: Examples

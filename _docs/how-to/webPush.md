@@ -141,24 +141,29 @@ function login (){
 
 ```php
 <div class="container">
-    <h2>Example: Build Push Notification System with PHP & MySQL</h2>
-    <h3>User Account </h3>
+    <h2>Пример: Реализация Web-push уведомлений с использованием PHP и MySQL</h2>
+    <h3>Пользователь </h3>
     <?php if(isset($_SESSION['username']) && $_SESSION['username'] == 'admin') { ?>
-        <a href="manage.php">Manage Notification</a> | 
+        <a href="manage.php">Управление уведомлениями</a> | 
     <?php } ?>
     <?php if(isset($_SESSION['username']) && $_SESSION['username']) { ?>
-        Logged in : <strong><?php echo $_SESSION['username']; ?></strong> | <a href="logout.php">Logout</a>
+        Авторизован как: <strong><?php echo $_SESSION['username']; ?></strong> | <a href="logout.php">Logout</a>
     <?php } else { ?>
         <a href="login.php">Login</a>
     <?php } ?>
     <hr> 
     <?php if (isset($_SESSION['username']) && $_SESSION['username']) { ?>
-        <div <?php if($_SESSION['username'] != 'admin') { ?> id="loggedIn" <?php } ?>>
+        <h4>
+            Добро пожаловать!
+        </h4>
+        <?php if($_SESSION['username'] == 'admin') { ?>
+        <div id="loggedIn">
             <h4>
-                You're welcome! You can manage 
+                Вы авторизованы для управления уведомлениями 
             </h4>
         </div>
-    <?php } ?>
+    <?php } }?>
+    
 </div>
 ```
 

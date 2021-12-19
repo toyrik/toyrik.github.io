@@ -10,6 +10,7 @@
     - debian-setup-for-nginx-proxy
     - pullrequest
     - webPush
+    - reversProxy
     - xdebug-setup
 
 

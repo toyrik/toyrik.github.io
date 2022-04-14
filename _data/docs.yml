@@ -13,6 +13,10 @@
     - reversProxy
     - xdebug-setup
 
+- title: cheatsheet
+  docs:
+      - tmux-cheatsheet
+
 
 #- title: Examples
 #  docs:

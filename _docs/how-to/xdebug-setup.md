@@ -10,8 +10,9 @@ permalink: /docs/xdebug-setup/
 
 ```conf
 [xdebug]
-zend_extension=xdebug.so
 xdebug.mode=debug
-xdebug.client_host=172.17.0.1
-xdebug.start_with_request=yes
+xdebug.start_with_request=trigger
+xdebug.discover_client_host = false
+xdebug.client_host = 127.0.0.1
+xdebug.client_port = 9000
 ```

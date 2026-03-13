@@ -1,0 +1,10 @@
+services:
+  jekyll:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - ${APP_PORT}:4000
+    volumes:
+      - ./src:/app
+    command: bundle exec jekyll serve --host 0.0.0.0 --livereload --force_polling

@@ -4,22 +4,13 @@
 
 ## Запуск на локальной машине
 
-Для начала вам понадобится установленные
- * Ruby
- * gem
- * bundler
- * jekyll
- 
-  затем:
+Для запуска в Docker вам понадобится установленный Docker и docker-compose.
 
 ```bash
 # склонировать проект в локальную папку и перейти в неё
 git clone https://github.com/toyrik/toyrik.github.io
 cd toyrik.github.io
 
-# установить зависимости
-bundle install
-
-# запустить jekyll с применением зависимостей
-bundle exec jekyll serve
+# запустить проект в Docker
+docker-compose up -d
 ```

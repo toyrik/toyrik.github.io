@@ -6,5 +6,5 @@ services:
     ports:
       - ${APP_PORT}:4000
     volumes:
-      - ./src:/app
+      - ./docs:/app
     command: bundle exec jekyll serve --host 0.0.0.0 --livereload --force_polling
